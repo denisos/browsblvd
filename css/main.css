@@ -1,0 +1,241 @@
+@import url("reset.css");  /* to-do: put in 1 file later */
+
+/****************** app styles ******************/
+
+:root {
+  --color-foreground-font: #000;
+  --color-foreground-font-reverse: #fff;
+  --color-background-primary: #fff;
+  --color-background-reverse: #000;
+  --color-background-secondary: #F6F3EF;
+}
+
+html {
+  font-size: clamp(1rem, 2vw, 2rem);  /* 0.61rem + 1.1vw */
+}
+
+/* section {
+  max-inline-size: 66ch;   // interfered with 100% width
+  line-height: 1.5;
+} */
+
+img,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: contain;
+  object-position: top center;
+}
+
+/* fonts etc */
+body {
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  font-display: swap;
+  text-align: center;
+  width: 100%;
+  min-width: 320px;
+}
+
+.lato {
+  font-family: 'Lato', sans-serif;
+}
+
+.noto {
+  font-family: 'Noto Serif', Arial, serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+p {
+  font-size: clamp(1rem, .1vw, .7rem);
+}
+
+h1 {
+  font-size: clamp(3.5rem, 2.5vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+}
+
+h2 {
+  font-size: clamp(2rem, 2.5vw, 3rem); /* 3rem; */
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: clamp(1rem, 2.5vw, 3rem); /* 2rem; */ 
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.hideIt {
+  display: none;
+}
+
+/* sections */
+.banner {
+  background-color: #000;
+  color: #fff;
+  min-height: 21px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.banner-text {
+  /* font-size: 24px; */
+  margin: 6px 0;
+  /* transform: translate(-50px); */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 18px;
+  position: sticky;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* booking form styles */
+#bookingFormConfirmation {
+  margin-top: 20px;
+  background-color: var(--color-background-secondary);
+  padding: 40px 0;
+  width: 100%;
+}
+
+#bookingFormContainer {
+  width: 100%;
+  margin: 0 20px 0;
+}
+
+.postBookingPromo {
+  background-color: var(--color-background-secondary);
+  width: 100%;
+}
+
+
+.disclaimerContainer {
+  margin: 0 8px
+}
+
+
+
+/* component styles */
+.linkButton {
+  min-width: 400px;
+  min-height: 80px;
+  background-color: #000;
+  color: #fff;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.linkButton.link-white {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Arial';
+  font-weight: 400;
+}
+
+a.linkButton:link,
+a.linkButton:visited,
+a.linkButton:hover,
+a.linkButton:active {
+  text-decoration: none;
+}
+
+input {
+  height: 50px;
+  /* width: 30%; */
+  min-width: 340px;
+  border: none;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: uppercase;
+}
+input:invalid {
+  border: 1px solid red;
+}
+input:valid {
+  border: 1px solid green;
+}
+
+.form-field {
+  margin: 20px 0;
+}
+
+
+
+.align-left {
+  text-align: left;
+}
+.line-height-extra {
+  line-height: 28px;
+}
+
+.arrow-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.arrow-down svg {
+  stroke: rgba(24, 24, 24, 1);
+}
+.svg-arrow {
+  width: 19px;
+  transform: rotate(90deg);
+}
+
+
+
+/* footer styles */
+.prefooter {
+  background-color: var(--color-background-secondary);
+  margin: 12px 0;
+  min-height: 500px;
+  width: 100%;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  height: 360px;
+  background-color: #000;
+}
+
+footer a {
+  color: #fff;
+}
+
+.social {
+  width: 22px;
+  height: 22px;
+  margin: 12px 0;
+}
+
+.social svg {
+  fill: #fff;
+}
+
+.se-icon {
+  height: 22px;
+  width: 22px
+}
